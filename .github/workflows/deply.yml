@@ -1,8 +1,6 @@
 name: DockerTest
 
 on: workflow_dispatch
-                   tags: 
-                      - "v1.0.0"
 
 jobs:
   BuildWheel:
@@ -15,7 +13,7 @@ jobs:
           python-version: 3.9.6
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=VERSION::1.0.0
       - name: Install deps fro Pypi Release
         run: |
           pip -q install setuptools wheel twine
