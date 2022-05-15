@@ -2,7 +2,7 @@ name: DockerTest
 
 on: workflow_dispatch
      tags:
-      - "v1.0.0"
+       - "v1.0.0"
 jobs:
   BuildWheel:
     runs-on: ubuntu-latest
