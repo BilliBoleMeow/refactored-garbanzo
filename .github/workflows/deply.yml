@@ -27,7 +27,7 @@ jobs:
           files: |
             dist/*
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
       - name: Sleep
         run: sleep 60
       - name: Set up QEMU
@@ -41,7 +41,7 @@ jobs:
         with:
           registry: ghcr.io
           username: token
-          password: ${{ secrets.GH_TOKEN }}
+          password: ${{ secrets.G_TOKEN }}
       - name: Docker meta
         id: metaraw
         uses: docker/metadata-action@v3
